@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTMX Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-[#212121] text-white">
+        <header class="px-5 flex flex-row justify-center items-center bg-red-700 w-full h-[50px]">
+            <span class="text-2xl text-white">HTMX Test drive</span>
+        </header>
+        <nav class="flex flex-row justify-between items-center bg-red-700 w-full h-[50px] px-7 fixed bottom-0">
+            <button class="bg-transparent text-white border-none" hx-get="/home" hx-swap="innerHTML" hx-target="#content" >Home</button>
+            <button class="bg-transparent text-white border-none" hx-get="/about" hx-swap="innerHTML" hx-target="#content" >About</button>
+            <button class="bg-transparent text-white border-none" hx-get="/contact" hx-swap="innerHTML" hx-target="#content" >Contact</button>
+        </nav>
+        <div id="content">
+            <h1>Home</h1>
+        </div>
+    </body>
+</html>
