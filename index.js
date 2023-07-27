@@ -36,10 +36,10 @@ app.get("/contact", function(req, res, next) {
 
 app.get("/clicked", function(req, res, next){
     const template = `
-        <div>
-            <h1>Welcome to the scriptures</h1>
-            <span id="counter">${counter} clicks</span>
-            <button hx-post="/clicked" hx-swap="innerText" hx-target="#counter">Increase</button>
+        <div class="p-3 rounded bg-[#454545] mt-5 ml-3 w-[350px]">
+            <h1>Clicked</h1>
+            <span id="counter">${counter} times</span>
+            <button class="px-3 bg-red-700" hx-post="/clicked" hx-swap="innerText" hx-target="#counter">Increase</button>
         </div>
     `
 
